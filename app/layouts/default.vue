@@ -28,8 +28,6 @@ useHead({
 
 <template>
     <eth-header active="projects"></eth-header>
-    <main>
-        <slot />
-    </main>
+    <slot />
     <eth-footer :source="sourceURL"></eth-footer>
 </template>
