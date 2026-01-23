@@ -31,5 +31,5 @@ useHead({
     <main>
         <slot />
     </main>
-    <eth-footer :source="{ sourceURL }"></eth-footer>
+    <eth-footer :source="sourceURL"></eth-footer>
 </template>
