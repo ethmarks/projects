@@ -2,10 +2,17 @@
 export default defineNuxtConfig({
   compatibilityDate: "2025-07-15",
   devtools: { enabled: true },
+
   vue: {
     compilerOptions: {
       isCustomElement: (tag) => tag.startsWith("eth-"),
     },
   },
+
   css: ["~/assets/css/main.css"],
+  modules: ["nuxt-shiki"],
+  shiki: {
+    bundledLangs: ["bash", "javascript"],
+    defaultTheme: "github-dark",
+  },
 });
