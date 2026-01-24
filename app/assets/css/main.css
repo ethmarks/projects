@@ -4,15 +4,16 @@
 .frontmatter,
 .heading,
 main > article {
-    width: 850px;
+    width: 100%;
+    max-width: 850px;
     margin-inline: auto;
 }
 .hero {
-    width: 1000px;
+    max-width: 1000px;
     margin-inline: auto;
 }
 .hero img {
-    max-width: 100%;
+    max-width: calc(100% - 3.2px);
     max-height: 100%;
     height: auto;
     border: var(--border-standard-2px);
