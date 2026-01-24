@@ -7,4 +7,5 @@ export default defineNuxtConfig({
       isCustomElement: (tag) => tag.startsWith("eth-"),
     },
   },
+  css: ["~/assets/css/main.css"],
 });
