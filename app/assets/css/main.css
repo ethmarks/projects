@@ -12,5 +12,13 @@ main > article {
     margin-inline: auto;
 }
 .hero img {
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
     border: var(--border-standard-2px);
+    border-radius: var(--radius-xl);
+}
+
+code {
+    background-color: transparent !important;
 }
