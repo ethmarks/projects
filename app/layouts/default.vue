@@ -31,3 +31,22 @@ useHead({
     <slot />
     <eth-footer :source="sourceURL"></eth-footer>
 </template>
+
+<style>
+:root {
+    --main-width: 1200px;
+}
+.frontmatter,
+.heading,
+main > article {
+    width: 850px;
+    margin-inline: auto;
+}
+.hero {
+    width: 1000px;
+    margin-inline: auto;
+}
+.hero img {
+    border: var(--border-standard-2px);
+}
+</style>
