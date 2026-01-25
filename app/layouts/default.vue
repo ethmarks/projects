@@ -22,6 +22,10 @@ useHead({
             src: `${assetsURL}/ethmarks.wc.js`,
             defer: true,
         },
+        {
+            src: `${assetsURL}/overflow.js`,
+            defer: true,
+        },
     ],
 });
 </script>
