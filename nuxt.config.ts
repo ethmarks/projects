@@ -9,6 +9,10 @@ export default defineNuxtConfig({
     },
   },
 
+  experimental: {
+    viewTransition: true,
+  },
+
   css: ["~/assets/css/main.css"],
   modules: ["nuxt-shiki"],
   shiki: {

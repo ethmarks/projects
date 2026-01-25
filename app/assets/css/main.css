@@ -37,3 +37,26 @@ code.shiki .line::before {
     text-align: right;
     color: rgba(115, 138, 148, 0.4);
 }
+
+h1 {
+    view-transition-name: heading;
+}
+::view-transition-old(heading),
+::view-transition-new(heading) {
+    /* Prevent height/width morphing */
+    height: auto;
+    width: auto;
+    mix-blend-mode: normal;
+}
+html {
+    overflow-anchor: none;
+}
+
+/* Force scroll position during view transitions */
+html::view-transition {
+    pointer-events: none;
+}
+
+html:has(::view-transition-group(*)) {
+    scroll-behavior: auto !important;
+}
