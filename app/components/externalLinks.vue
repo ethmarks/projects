@@ -70,8 +70,6 @@ const animClass = props.animated ? "external-link animated" : "external-link";
             :key="index"
             :class="animClass"
             :href="link.href"
-            target="_blank"
-            rel="noopener noreferrer"
         >
             <img :src="`/icons/${link.icon}.svg`" :alt="`${link.label} icon`" />
             <span>{{ link.label }}</span>
