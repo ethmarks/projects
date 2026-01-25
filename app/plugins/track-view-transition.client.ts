@@ -1,8 +1,12 @@
 export default defineNuxtPlugin((nuxtApp) => {
   let isViewTransitioning = false;
 
-  const addAnimationClass = () => {
+  const removeAnimationClass = () => {
     document.documentElement.classList.remove("no-view-transition");
+  };
+
+  const addAnimationClass = () => {
+    removeAnimationClass();
 
     // If no view transition is happening, add the class
     if (!isViewTransitioning) {
@@ -33,7 +37,12 @@ export default defineNuxtPlugin((nuxtApp) => {
   // Run on initial load
   addAnimationClass();
 
-  // Run on every page navigation
+  // Remove class the moment navigation starts
+  nuxtApp.hook("page:start", () => {
+    removeAnimationClass();
+  });
+
+  // Run on every page navigation finish
   nuxtApp.hook("page:finish", () => {
     addAnimationClass();
   });
