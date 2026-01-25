@@ -63,6 +63,8 @@ html:has(::view-transition-group(*)) {
 html:not(.no-view-transition) .card,
 html:not(.no-view-transition) h1,
 html:not(.no-view-transition) .hero img,
-html:not(.no-view-transition) .external-link {
+html:not(.no-view-transition) .external-link,
+html:not(.no-view-transition) .info h2,
+html:not(.no-view-transition) .info p {
     animation: none !important;
 }
