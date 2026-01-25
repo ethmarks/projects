@@ -71,7 +71,7 @@ const animClass = props.animated ? "external-link animated" : "external-link";
             :class="animClass"
             :href="link.href"
         >
-            <img :src="${useRuntimeConfig().app.baseURL}icons/${link.icon}.svg" :alt="`${link.label} icon`" />
+            <img :src="`${useRuntimeConfig().app.baseURL}icons/${link.icon}.svg`" :alt="`${link.label} icon`" />
             <span>{{ link.label }}</span>
         </a>
     </div>
