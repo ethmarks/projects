@@ -18,6 +18,14 @@
                 title="Thessa"
                 desc="An AI thesaurus built with Sveltekit powered by Cerebras"
             />
+            <ProjectCard
+                id="colourlesstransformer"
+                href="/colourlesstransformer"
+                img="/colourlesstransformer.webp"
+                alt="A highly stylized watercolour-style image of a concrete walkway runs alongside a dense hedge of flowering bushes, all under a sleek red pergola."
+                title="ColourlessTransformer"
+                desc="A Streamlit interface for PaintTransformer, a neural network that approximates images using paint strokes"
+            />
         </div>
     </main>
 </template>
