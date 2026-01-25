@@ -32,7 +32,7 @@ const style = `view-transition-name: img-${props.id}`;
     height: auto;
     max-width: 100%;
     border-radius: var(--radius-md);
-    animation: cardEntranceLeft 1s ease forwards;
+    animation: cardEntranceLeft 1s 0.3s ease both;
 }
 
 a {
