@@ -60,3 +60,7 @@ html::view-transition {
 html:has(::view-transition-group(*)) {
     scroll-behavior: auto !important;
 }
+
+html:not(.no-view-transition) .card {
+    animation: none !important;
+}
