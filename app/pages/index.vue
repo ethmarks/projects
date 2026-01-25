@@ -17,9 +17,6 @@
 <style scoped>
 h1 {
     margin-inline: auto;
-    position: sticky;
-    top: calc(var(--main-margin-top) + 0.2rem);
-    z-index: 9999;
 }
 projectCard-container {
     display: flex;
