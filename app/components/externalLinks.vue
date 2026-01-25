@@ -61,6 +61,10 @@ const processedLinks = computed(() => {
 });
 
 const animClass = props.animated ? "external-link animated" : "external-link";
+
+const config = useRuntimeConfig()
+const base = config.app.baseURL
+const src = base + `icons/${link.icon}.svg`;
 </script>
 
 <template>
@@ -71,7 +75,7 @@ const animClass = props.animated ? "external-link animated" : "external-link";
             :class="animClass"
             :href="link.href"
         >
-            <img :src="`/icons/${link.icon}.svg`" :alt="`${link.label} icon`" />
+            <img :src :alt="`${link.label} icon`" />
             <span>{{ link.label }}</span>
         </a>
     </div>
