@@ -16,7 +16,7 @@
         <div class="frontmatter">
             <ExternalLinks :urls="['github.com/ethmarks/fphf']" animated />
         </div>
-        <article>
+        <article class="animated">
             <p>
                 <a href="https://github.com/ethmarks/fphf">fphf</a> (Fixed-Point
                 Hash Finder) is a tool I made that brute-forces the SHA-256
