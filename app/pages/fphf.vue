@@ -14,7 +14,7 @@
             />
         </div>
         <div class="frontmatter">
-            <ExternalLinks :urls="['github.com/ethmarks/fphf']" />
+            <ExternalLinks :urls="['github.com/ethmarks/fphf']" animated />
         </div>
         <article>
             <p>

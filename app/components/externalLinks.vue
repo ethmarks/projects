@@ -5,7 +5,10 @@ const props = defineProps({
     urls: {
         type: Array,
         required: true,
-        default: () => [],
+    },
+    animated: {
+        type: Boolean,
+        default: false,
     },
 });
 
@@ -56,6 +59,8 @@ const processedLinks = computed(() => {
             };
         });
 });
+
+const animClass = props.animated ? "external-link animated" : "external-link";
 </script>
 
 <template>
@@ -63,7 +68,7 @@ const processedLinks = computed(() => {
         <a
             v-for="(link, index) in processedLinks"
             :key="index"
-            class="external-link animated"
+            :class="animClass"
             :href="link.href"
             target="_blank"
             rel="noopener noreferrer"
@@ -73,3 +78,11 @@ const processedLinks = computed(() => {
         </a>
     </div>
 </template>
+
+<style>
+.external-link {
+    animation-fill-mode: both !important;
+    animation-duration: 0.7s !important;
+    animation-delay: 0.5s !important;
+}
+</style>
