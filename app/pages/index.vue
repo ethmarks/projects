@@ -10,6 +10,14 @@
                 title="Fixed-Point Hash Finder"
                 desc="A Rust tool that searches a cryptographic hash space for strings that contain part of their own SHA-256 hash"
             />
+            <ProjectCard
+                id="thessa"
+                href="/thessa"
+                img="/thessa.webp"
+                alt="Screenshot of the Thessa interface with the input bar open"
+                title="Thessa"
+                desc="An AI thesaurus built with Sveltekit powered by Cerebras"
+            />
         </div>
     </main>
 </template>
