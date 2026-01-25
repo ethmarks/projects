@@ -1,7 +1,7 @@
 <template>
     <main>
         <div class="heading">
-            <h1>Fixed-Point Hash Finder</h1>
+            <h1 class="animated">Fixed-Point Hash Finder</h1>
         </div>
         <div class="hero">
             <img

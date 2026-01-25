@@ -23,6 +23,9 @@ main > article {
 h1 {
     view-transition-name: heading;
 }
+h1.animated {
+    animation-fill-mode: both !important;
+}
 ::view-transition-old(heading),
 ::view-transition-new(heading) {
     /* Prevent height/width morphing */
@@ -43,6 +46,8 @@ html:has(::view-transition-group(*)) {
     scroll-behavior: auto !important;
 }
 
-html:not(.no-view-transition) .card {
+html:not(.no-view-transition) .card,
+html:not(.no-view-transition) h1,
+html:not(.no-view-transition) grid {
     animation: none !important;
 }

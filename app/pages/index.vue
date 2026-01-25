@@ -1,6 +1,6 @@
 <template>
     <main>
-        <h1 id="site-heading">Projects</h1>
+        <h1 id="site-heading" class="animated">Projects</h1>
         <ProjectCard
             id="fphf"
             href="/fphf"
