@@ -26,7 +26,10 @@ const props = defineProps({
     },
 });
 const style = `view-transition-name: img-${props.id}`;
-const src = withBase(props.img);
+
+const config = useRuntimeConfig()
+const base = config.app.baseURL
+const src = base + props.img;
 </script>
 
 <template>
