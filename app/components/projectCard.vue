@@ -48,18 +48,47 @@ const style = `view-transition-name: img-${props.id}`;
     grid-template-columns: var(--column-one) var(--column-two);
     gap: var(--spacing-lg);
 }
-.projectCard:nth-child(2) {
+.projectCard:nth-child(even) {
     grid-template-columns: var(--column-two) var(--column-one);
 }
-.projectCard:nth-child(2) img {
+
+@media (max-width: 768px) {
+    .projectCard {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        padding: var(--spacing-xs);
+    }
+    .info {
+        order: -1;
+    }
+    h2 {
+        margin-block: 0;
+    }
+    p {
+        margin-block: 0;
+    }
+    a {
+        max-width: 90%;
+    }
+    .projectCard:nth-child(even) a {
+        margin-left: auto;
+    }
+}
+
+.projectCard:nth-child(even) img {
     animation-name: cardEntranceRight;
 }
-.projectCard:nth-child(2) .info {
-    order: -1;
+.projectCard:nth-child(even) .info {
     text-align: right;
 }
-.projectCard:nth-child(2) h2 {
+.projectCard:nth-child(even) h2 {
     animation-name: h2EntranceLeft;
+}
+@media (min-width: 769px) {
+    .projectCard:nth-child(even) .info {
+        order: -1;
+    }
 }
 h2 {
     color: var(--color-accent);
