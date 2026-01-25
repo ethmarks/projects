@@ -47,3 +47,23 @@ const extractedCode = computed(() => {
 <template>
     <Shiki :lang="lang" :code="extractedCode" />
 </template>
+
+<style>
+code {
+    background-color: transparent !important;
+}
+
+code.shiki {
+    counter-reset: step;
+    counter-increment: section 0;
+}
+
+code.shiki .line::before {
+    content: counter(step);
+    counter-increment: step;
+    margin-right: 1ch;
+    display: inline-block;
+    text-align: right;
+    color: rgba(115, 138, 148, 0.4);
+}
+</style>
