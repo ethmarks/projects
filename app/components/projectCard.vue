@@ -26,12 +26,13 @@ const props = defineProps({
     },
 });
 const style = `view-transition-name: img-${props.id}`;
+const src = withBase(props.img);
 </script>
 
 <template>
     <div class="projectCard staggered">
         <NuxtLink :to="href">
-            <img class="card" :src="props.img" :alt="props.alt" :style />
+            <img class="card" :src :alt="props.alt" :style />
         </NuxtLink>
         <div class="info">
             <h2>{{ props.title }}</h2>
