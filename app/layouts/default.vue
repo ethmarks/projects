@@ -26,6 +26,14 @@ useHead({
             src: `${assetsURL}/overflow.js`,
             defer: true,
         },
+        {
+            src: `https://site-ethmarks.vercel.app/_vercel/insights/script.js`,
+            defer: true,
+        },
+        {
+            innerHTML:
+                "window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };",
+        },
     ],
 });
 </script>
