@@ -1,36 +1,6 @@
+/* stylesheet for all pages */
 :root {
     --main-width: 1200px;
-}
-.frontmatter,
-.heading,
-main > article {
-    width: 100%;
-    max-width: 850px;
-    margin-inline: auto;
-}
-.hero {
-    max-width: 1000px;
-    margin-inline: auto;
-}
-.hero img {
-    max-width: calc(100% - 3.2px);
-    max-height: 100%;
-    height: auto;
-    border: var(--border-standard-2px);
-    border-radius: var(--radius-xl);
-    animation: heroEntrance 1.5s 0.3s ease both;
-}
-
-@keyframes heroEntrance {
-    0% {
-        clip-path: xywh(50% 0 0 10% round var(--radius-xl));
-    }
-    60% {
-        clip-path: xywh(0 0 100% 70% round var(--radius-xl));
-    }
-    100% {
-        clip-path: xywh(0 0 100% 100% round var(--radius-xl));
-    }
 }
 
 h1 {

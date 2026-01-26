@@ -13,7 +13,7 @@ export default defineNuxtConfig({
     viewTransition: true,
   },
 
-  css: ["~/assets/css/main.css"],
+  css: ["~/assets/css/main.css", "~/assets/css/content.css"],
   modules: ["nuxt-shiki"],
   shiki: {
     bundledLangs: ["bash", "javascript"],
