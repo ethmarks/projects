@@ -1,3 +1,11 @@
+<script setup>
+definePageMeta({
+    title: "Thessa",
+    desc: "An AI thesaurus built with Sveltekit powered by Cerebras",
+    img: "/thessa.webp",
+});
+</script>
+
 <template>
     <main>
         <div class="heading">

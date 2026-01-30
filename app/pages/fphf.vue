@@ -1,3 +1,11 @@
+<script setup>
+definePageMeta({
+    title: "Fixed-Point Hash Finder",
+    desc: "A Rust tool that searches a cryptographic hash space for strings that contain part of their own SHA-256 hash",
+    img: "/fphf_konsole.webp",
+});
+</script>
+
 <template>
     <main>
         <div class="heading">
