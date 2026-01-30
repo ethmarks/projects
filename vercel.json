@@ -1,6 +1,6 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "buildCommand": "pnpm build && mkdir -p dist/projects && mv .output/public/* dist/projects/",
+  "buildCommand": "pnpm build && rm dist && mkdir -p dist/projects && mv .output/public/* dist/projects/",
   "outputDirectory": "dist",
   "redirects": [
     {
