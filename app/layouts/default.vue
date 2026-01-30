@@ -20,7 +20,7 @@ useSeoMeta({
     title: pageTitle,
     ogTitle: pageTitle,
     description: pageDesc,
-    ogURL: pageURL,
+    ogUrl: pageURL,
     ogDescription: pageDesc,
     ogType: "website",
     ogImage: pageImg,
