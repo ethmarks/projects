@@ -1,3 +1,11 @@
+<script setup>
+definePageMeta({
+    title: "ColourlessTransformer",
+    desc: "A Streamlit interface for PaintTransformer, a neural network that approximates images using paint strokes",
+    img: "/colourlesstransformer.webp",
+});
+</script>
+
 <template>
     <main>
         <div class="heading">
