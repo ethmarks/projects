@@ -1,7 +1,7 @@
 <script setup>
-const siteURL = useRuntimeConfig().public.siteURL; // "https://site-ethmarks.vercel.app/projects"
 const route = useRoute();
 
+const canonUrl = "https://site-ethmarks.vercel.app/projects";
 const assetsURL = "https://site-ethmarks.vercel.app/common";
 const sourceURL = "https://github.com/ethmarks/projects";
 
@@ -9,12 +9,14 @@ const pageTitle = computed(() => route.meta.title || "Projects");
 const pageDesc = computed(
     () =>
         route.meta.desc ||
-        "The projects collection of ethmarks's personal website",
+        "The projects collection of Ethan Marks's personal website",
 );
 const pageImg = computed(() =>
-    route.meta.img ? `${siteURL}${route.meta.img}` : null,
+    route.meta.img
+        ? `${canonUrl}${route.meta.img}`
+        : `${canonUrl}/ethmarks_projects.webp`,
 );
-const pageURL = `${siteURL}${route.path.replace(/\/$/, "")}`;
+const pageURL = `${canonUrl}${route.path.replace(/\/$/, "")}`;
 
 useSeoMeta({
     title: pageTitle,

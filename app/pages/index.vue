@@ -1,10 +1,3 @@
-<script setup>
-definePageMeta({
-    title: "Projects",
-    desc: "The projects collection of ethmarks's personal website",
-});
-</script>
-
 <template>
     <main>
         <h1 id="site-heading" class="animated">Projects</h1>
