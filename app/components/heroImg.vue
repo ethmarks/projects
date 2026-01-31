@@ -1,7 +1,7 @@
 <script setup>
 const route = useRoute();
 
-const src = route.meta.img;
+const img = route.meta.img;
 const alt = route.meta.imgAlt;
 
 const dims = useState(`dims-${route.path}`, () => ({
@@ -11,7 +11,7 @@ const dims = useState(`dims-${route.path}`, () => ({
 if (import.meta.server) {
     try {
         const { imageSizeFromFile } = await import("image-size/fromFile");
-        const dimensions = await imageSizeFromFile(`./public${src}`);
+        const dimensions = await imageSizeFromFile(`./public${img}`);
         dims.value.width = dimensions.width;
         dims.value.height = dimensions.height;
     } catch (e) {
@@ -19,6 +19,7 @@ if (import.meta.server) {
     }
 }
 
+const src = `${base}${img}`;
 const path = route.path.replace(/^\//, ""); // remove leading slash
 const style = `view-transition-name: img-${path}`;
 </script>
