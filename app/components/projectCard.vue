@@ -25,17 +25,40 @@ const props = defineProps({
         required: true,
     },
 });
+const route = useRoute();
 const style = `view-transition-name: img-${props.id}`;
 
 const config = useRuntimeConfig();
 const base = config.app.baseURL.replace(/\/$/, "");
 const src = `${base}${props.img}`;
+
+const dims = useState(`dims-${route.path}`, () => ({
+    width: undefined,
+    height: undefined,
+}));
+if (import.meta.server) {
+    try {
+        const { imageSizeFromFile } = await import("image-size/fromFile");
+        const dimensions = await imageSizeFromFile(`./public${props.img}`);
+        dims.value.width = dimensions.width;
+        dims.value.height = dimensions.height;
+    } catch (e) {
+        console.error("Server-side image sizing failed:", e);
+    }
+}
 </script>
 
 <template>
     <div class="projectCard staggered">
         <NuxtLink :to="href">
-            <img class="card" :src :alt="props.alt" :style />
+            <img
+                class="card"
+                :src
+                :alt="props.alt"
+                :style
+                :width="dims.width"
+                :height="dims.height"
+            />
         </NuxtLink>
         <div class="info">
             <h2>{{ props.title }}</h2>
