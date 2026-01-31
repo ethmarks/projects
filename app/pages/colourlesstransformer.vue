@@ -3,6 +3,7 @@ definePageMeta({
     title: "ColourlessTransformer",
     desc: "A Streamlit interface for PaintTransformer, a neural network that approximates images using paint strokes",
     img: "/colourlesstransformer.webp",
+    imgAlt: "A highly stylized watercolour-style image of a concrete walkway runs alongside a dense hedge of flowering bushes, all under a sleek red pergola.",
 });
 </script>
 
@@ -11,16 +12,7 @@ definePageMeta({
         <div class="heading">
             <h1 class="animated">ColourlessTransformer</h1>
         </div>
-        <div class="hero">
-            <img
-                src="/colourlesstransformer.webp"
-                decoding="sync"
-                alt="A highly stylized watercolour-style image of a concrete walkway runs alongside a dense hedge of flowering bushes, all under a sleek red pergola."
-                width="1366"
-                height="614"
-                style="view-transition-name: img-colourlesstransformer"
-            />
-        </div>
+        <HeroImg />
         <div class="frontmatter">
             <ExternalLinks
                 :urls="['github.com/ethmarks/colourlesstransformer']"

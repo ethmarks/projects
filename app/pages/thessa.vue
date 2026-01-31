@@ -3,6 +3,7 @@ definePageMeta({
     title: "Thessa",
     desc: "An AI thesaurus built with Sveltekit powered by Cerebras",
     img: "/thessa.webp",
+    imgAlt: "Screenshot of the Thessa interface with the input bar open",
 });
 </script>
 
@@ -11,16 +12,7 @@ definePageMeta({
         <div class="heading">
             <h1 class="animated">Thessa</h1>
         </div>
-        <div class="hero">
-            <img
-                src="/thessa.webp"
-                decoding="sync"
-                alt="Screenshot of the Thessa interface with the input bar open"
-                width="2256"
-                height="1263"
-                style="view-transition-name: img-thessa"
-            />
-        </div>
+        <HeroImg />
         <div class="frontmatter">
             <ExternalLinks
                 :urls="[
