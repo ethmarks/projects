@@ -19,6 +19,8 @@ if (import.meta.server) {
     }
 }
 
+const config = useRuntimeConfig();
+const base = config.app.baseURL.replace(/\/$/, "");
 const src = `${base}${img}`;
 const path = route.path.replace(/^\//, ""); // remove leading slash
 const style = `view-transition-name: img-${path}`;
